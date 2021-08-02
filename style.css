@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --darkCyan: hsl(185, 75%, 39%);
+    --darkDesaturatedBlue: hsl(229, 23%, 23%);
+    --darkGrayBlue: hsl(227, 10%, 46%); 
+}
+
+* {
+   padding: 0;
+   margin: 0; 
+}
+
+body {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: var(--darkCyan);
+    font-size: 1.125rem;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.background-pattern {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    background-image: url("/images/bg-pattern-top.svg"), url('/images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat;
+    background-position: -21rem -30.375rem, 48rem 22.625rem
+}
+
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 3px 5px 20px 6px rgb(0 0 0 / 30%);
+    min-width: 350px;
+    margin: 10px;
+    transform: translateY(215px);
+}
+
+.cover {
+    display: block;
+    background-image: url('/images/bg-pattern-card.svg');
+    height: 8.75rem;
+    border-radius: 10px 10px 0 0;
+}
+
+.profile-picture {
+    background-image: url('/images/image-victor.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin: 0 auto;
+    transform: translateY(-50%);
+}
+
+.username {
+    margin: -30px auto;
+    padding-bottom: 1.875rem;
+    border-bottom: 1px solid #e4e3e3;
+}
+
+.name {
+    font-weight: 700;
+    padding-bottom: 0.9375rem;
+}
+
+.name > span {
+    font-weight: 300;
+    color: var(--darkGrayBlue);
+}
+
+
+.location {
+    font-size: 11px;
+    letter-spacing: 0.06rem;
+    color: var(--darkGrayBlue);
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.875rem 3.125rem;
+    padding-top: 1.875rem;
+}
+
+
+.stats .numbers {
+    color: var(--darkDesaturatedBlue);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.625rem;
+}
+
+.stats .label {
+    color: var(--darkGrayBlue);
+    letter-spacing: 0.09rem;
+    font-size: 0.7rem;
+    font-weight: 300;
+}
